@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Don Flores Ituzaingó · Pizza, pasta y más · Pedí directo</title>
+<meta name="description" content="Don Flores, pizzería en Brandsen 805, Ituzaingó. Pizza, pasta y más, con envíos a domicilio. Armá tu pedido y mandalo directo por WhatsApp, sin apps. 4,7 en Google.">
+<!-- Demo para mostrarle al dueño: no se indexa hasta que la contrate. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#b7071c">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;700;800;900&family=Yellowtail&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rojo:#b7071c; --rojo-2:#d3182e; --rojo-osc:#7e0413;
+  --cafe:#3e2216; --cafe-2:#553020; --cafe-3:#6d4130;
+  --naranja:#e17a2f; --amarillo:#f7d93a;
+  --crema:#fff6e8; --crema-2:#f8ead2; --crema-3:#efd9b6; --papel:#fffdf8;
+  --tinta:#2b1810; --gris:#7b6457; --linea:#e7d3b3;
+  --wa:#25d366; --wa-osc:#0b3d1c;
+  --titulo:'Lilita One','Arial Rounded MT Bold',system-ui,sans-serif;
+  --texto:'Nunito',system-ui,sans-serif;
+  --script:'Yellowtail',cursive;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:74px}
+body{background:var(--crema);color:var(--tinta);font-family:var(--texto);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+.contenedor{width:min(1140px,100% - 32px);margin-inline:auto}
+h1,h2,h3{font-family:var(--titulo);font-weight:400;line-height:1.02;letter-spacing:.005em}
+h2{font-size:clamp(34px,5.4vw,54px)}
+.script{font-family:var(--script);font-weight:400}
+.eyebrow{font-weight:900;letter-spacing:.16em;text-transform:uppercase;font-size:13px;color:var(--rojo);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.eyebrow::before{content:'';width:26px;height:4px;border-radius:4px;background:var(--naranja)}
+section{padding:84px 0}
+
+/* mantel a cuadros (el de la foto de sus clientes) */
+.mantel{height:36px;background:
+  linear-gradient(90deg,#b7071c80 50%,transparent 50%) 0 0/24px 24px,
+  linear-gradient(0deg,#b7071c80 50%,transparent 50%) 0 0/24px 24px,
+  #fffaf2}
+
+/* ---------- botones ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--texto);font-weight:900;font-size:17px;padding:15px 24px;border-radius:999px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s,box-shadow .15s;line-height:1.1;text-align:center}
+.btn:active{transform:scale(.97)}
+.btn svg{width:21px;height:21px;flex:none}
+.btn-wa{background:var(--wa);color:var(--wa-osc);box-shadow:0 8px 22px -8px #25d366aa}
+.btn-wa:hover{background:#34e27a}
+.btn-amarillo{background:var(--amarillo);color:var(--cafe);box-shadow:0 8px 0 -2px #00000033}
+.btn-amarillo:hover{background:#ffe45a}
+.btn-borde{border-color:currentColor;color:inherit;background:transparent}
+.btn-borde:hover{background:#ffffff14}
+.btn-rojo{background:var(--rojo);color:#fff}
+.btn-rojo:hover{background:var(--rojo-2)}
+
+/* ---------- barra de arriba ---------- */
+.top{position:sticky;top:0;z-index:40;background:#fff6e8ee;backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+.top .contenedor{display:flex;align-items:center;justify-content:space-between;height:66px;gap:14px}
+.marca{display:flex;align-items:center;gap:11px;text-decoration:none}
+.marca img{width:46px;height:46px;border-radius:12px}
+.marca b{font-family:var(--titulo);font-weight:400;font-size:22px;line-height:1;color:var(--rojo);display:block}
+.marca small{display:block;font-size:12.5px;color:var(--gris);font-weight:700;margin-top:3px}
+.nav{display:flex;align-items:center;gap:22px}
+.nav a.link{text-decoration:none;font-weight:800;font-size:15px;color:var(--cafe)}
+.nav a.link:hover{color:var(--rojo)}
+.nav .btn{padding:11px 20px;font-size:15px}
+
+/* ---------- portada ---------- */
+.portada{position:relative;overflow:hidden;color:#fff;padding:64px 0 84px;
+  background:
+    radial-gradient(700px 480px at 80% 45%, #e3243a 0%, transparent 65%),
+    repeating-linear-gradient(90deg,#ffffff0a 0 26px,transparent 26px 52px),
+    repeating-linear-gradient(0deg,#ffffff0a 0 26px,transparent 26px 52px),
+    var(--rojo)}
+.portada .contenedor{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.portada .eyebrow{color:#ffe7c2}
+.portada .eyebrow::before{background:var(--amarillo)}
+.portada h1{font-size:clamp(46px,7.6vw,88px)}
+.portada h1 .script{display:block;font-size:.62em;color:var(--amarillo);margin-bottom:6px;transform:rotate(-3deg);transform-origin:left;letter-spacing:0}
+.portada h1 em{font-style:normal;color:var(--amarillo)}
+.portada .bajada{font-size:clamp(17px,2.2vw,21px);color:#ffe7df;max-width:540px;margin:20px 0 28px;font-weight:600}
+.portada .bajada b{color:#fff;font-weight:900}
+.botones{display:flex;flex-wrap:wrap;gap:12px}
+.portada .btn-borde{color:#fff}
+.sin-apps{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px 18px;font-weight:800;font-size:15px;color:#ffd9cf;list-style:none}
+.sin-apps li{display:flex;align-items:center;gap:7px}
+.sin-apps svg{width:18px;height:18px;color:var(--amarillo)}
+
+.fotos-portada{position:relative;height:560px;justify-self:center;width:min(440px,100%)}
+.polaroid{position:absolute;background:#fff;padding:10px 10px 12px;border-radius:14px;box-shadow:0 30px 60px -20px #0009}
+.polaroid img{border-radius:8px;width:100%;height:100%;object-fit:cover}
+.polaroid.a{width:300px;height:520px;right:10px;top:10px;transform:rotate(4deg)}
+.polaroid.b{width:220px;height:300px;left:0;bottom:0;transform:rotate(-7deg)}
+.sticker{position:absolute;left:18px;top:34px;width:128px;height:128px;border-radius:50%;background:var(--amarillo);color:var(--cafe);display:grid;place-content:center;text-align:center;transform:rotate(-10deg);box-shadow:0 14px 30px -10px #0008;z-index:3}
+.sticker b{font-family:var(--titulo);font-size:42px;line-height:.9;font-weight:400}
+.sticker span{font-size:13px;font-weight:900;line-height:1.15}
+.sticker i{font-style:normal;letter-spacing:1px;font-size:14px;color:var(--rojo)}
+
+/* ---------- fila de datos ---------- */
+.datos{background:var(--cafe);color:var(--crema)}
+.datos ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr)}
+.datos li{display:flex;align-items:center;gap:13px;padding:20px 16px;border-right:1px solid #ffffff1a}
+.datos li:last-child{border-right:0}
+.datos .ic{width:44px;height:44px;border-radius:12px;background:var(--cafe-2);color:var(--amarillo);display:grid;place-items:center;flex:none}
+.datos .ic svg{width:23px;height:23px}
+.datos strong{display:block;font-family:var(--titulo);font-weight:400;font-size:23px;line-height:1.05}
+.datos span{font-size:14px;color:#e9d6bd;line-height:1.3;font-weight:600}
+
+/* ---------- carta ---------- */
+.carta-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:32px}
+.carta-head p{max-width:430px;color:var(--gris);font-weight:600}
+.carta{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(240px,auto);gap:16px}
+.cat{position:relative;border-radius:var(--r);overflow:hidden;background:var(--papel);border:1px solid var(--linea);display:flex;flex-direction:column}
+.cat .foto{flex:1;min-height:200px;position:relative}
+.cat .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cat .cuerpo{padding:18px 20px 20px}
+.cat h3{font-size:30px;color:var(--rojo)}
+.cat p{font-size:15px;color:var(--gris);font-weight:600;margin-top:4px}
+.cat.pizzas{grid-column:span 2;grid-row:span 2}
+.cat.pizzas .foto{min-height:320px}
+.gustos{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.gusto{background:var(--crema-2);border:1px solid var(--crema-3);color:var(--cafe);border-radius:999px;padding:6px 13px;font-size:14px;font-weight:800}
+.cat.tapa{border:0;color:var(--crema);justify-content:center;align-items:center;text-align:center;padding:26px}
+.cat.tapa .script{font-size:clamp(44px,4.3vw,58px);line-height:1;color:#fff;max-width:100%}
+.cat.tapa p{color:inherit;opacity:.85;margin-top:10px;max-width:220px}
+.cat.cafe{background:var(--cafe)}
+.cat.naranja{background:var(--naranja)}
+.cat.naranja p{color:#fff}
+.cat.sandw{grid-column:span 2}
+.cat.sandw{flex-direction:row}
+.cat.sandw .foto{flex:1.1;min-height:240px}
+.cat.sandw .cuerpo{flex:1;display:flex;flex-direction:column;justify-content:center}
+.aviso-demo{margin-top:18px;font-size:13.5px;color:var(--gris);font-weight:600;display:flex;gap:8px;align-items:flex-start}
+.aviso-demo svg{width:17px;height:17px;flex:none;margin-top:2px;color:var(--naranja)}
+
+/* ---------- armador de pedido ---------- */
+.pedido{background:var(--crema-2);position:relative}
+.pedido .contenedor{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:start}
+.pedido-intro{grid-column:1/-1;display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:4px}
+.pedido-intro p{color:var(--gris);font-weight:600;max-width:440px}
+.productos{background:var(--papel);border:1px solid var(--linea);border-radius:22px;padding:8px 22px 14px}
+.grupo{padding:14px 0 6px;border-bottom:1px dashed var(--crema-3)}
+.grupo:last-child{border-bottom:0}
+.grupo h3{font-size:24px;color:var(--rojo);display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.grupo h3 small{font-family:var(--texto);font-size:13px;color:var(--gris);font-weight:700}
+.item{display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 14px;padding:10px 0}
+.item .nom{font-weight:800;font-size:17px;line-height:1.25}
+.item .nom small{display:block;font-weight:600;color:var(--gris);font-size:13.5px}
+.cant{display:flex;align-items:center;background:var(--crema);border:1px solid var(--crema-3);border-radius:999px;padding:3px}
+.cant button{width:38px;height:38px;border-radius:50%;border:0;background:transparent;font-size:22px;font-weight:900;cursor:pointer;display:grid;place-items:center;color:var(--cafe);line-height:1}
+.cant button:hover{background:#fff}
+.cant button.mas{background:var(--rojo);color:#fff}
+.cant button.mas:hover{background:var(--rojo-2)}
+.cant output{min-width:30px;text-align:center;font-weight:900;font-size:17px}
+.item.activo .nom{color:var(--rojo)}
+.mitades{grid-column:1/-1;display:none;grid-template-columns:1fr 1fr;gap:10px;margin-top:2px}
+.item.activo .mitades{display:grid}
+.mitades label{font-size:12.5px;font-weight:800;color:var(--gris);display:grid;gap:4px}
+
+.ticket{position:sticky;top:86px;background:#fff;border-radius:22px;padding:24px 22px 22px;box-shadow:0 24px 50px -28px #3e221666;border:1px solid var(--linea);display:grid;gap:15px}
+.ticket h3{font-size:28px;color:var(--cafe);display:flex;justify-content:space-between;align-items:baseline}
+.ticket h3 span{font-family:var(--texto);font-size:14px;font-weight:800;color:var(--gris)}
+.resumen{list-style:none;border-block:2px dashed var(--crema-3);padding:10px 0;display:grid;gap:6px;min-height:52px}
+.resumen li{display:flex;gap:10px;font-weight:700;font-size:15.5px}
+.resumen li b{color:var(--rojo);min-width:30px}
+.resumen .vacio{color:var(--gris);font-weight:600;font-style:italic}
+.opciones{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.opcion{position:relative}
+.opcion input{position:absolute;opacity:0;pointer-events:none}
+.opcion span{display:block;text-align:center;border:2px solid var(--crema-3);border-radius:14px;padding:11px 8px;font-weight:800;font-size:15px;cursor:pointer;line-height:1.2;background:var(--papel)}
+.opcion span small{display:block;font-weight:600;font-size:12.5px;color:var(--gris)}
+.opcion input:checked + span{border-color:var(--rojo);background:#fff0ee;color:var(--rojo)}
+.opcion input:focus-visible + span{outline:3px solid var(--amarillo)}
+.campo{display:grid;gap:6px;font-size:14px;font-weight:800;color:var(--cafe)}
+.campo input,.campo select,.campo textarea,.mitades select{width:100%;background:var(--papel);border:1.5px solid var(--crema-3);color:var(--tinta);border-radius:12px;padding:12px 13px;font:inherit;font-size:16px;font-weight:600}
+.mitades select{padding:9px 10px;font-size:15px}
+.campo textarea{min-height:78px;resize:vertical}
+.campo input:focus,.campo select:focus,.campo textarea:focus,.mitades select:focus{outline:none;border-color:var(--naranja);box-shadow:0 0 0 3px #e17a2f33}
+.campo.error input{border-color:var(--rojo);box-shadow:0 0 0 3px #b7071c22}
+.fila2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.oculto{display:none!important}
+.ticket .btn{width:100%;font-size:18px;padding:17px 20px}
+.ticket .nota{font-size:13px;color:var(--gris);text-align:center;font-weight:600}
+.msg-error{background:#fff0ee;color:var(--rojo);border-radius:12px;padding:10px 12px;font-weight:800;font-size:14px}
+.etiqueta{font-size:14px;font-weight:800;color:var(--cafe);margin-bottom:-6px}
+
+/* ---------- sin apps ---------- */
+.directo{background:var(--cafe);color:var(--crema);overflow:hidden;position:relative}
+.directo .contenedor{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.directo .eyebrow{color:var(--amarillo)}
+.directo h2 em{font-style:normal;color:var(--amarillo)}
+.directo p.lead{color:#e9d6bd;margin-top:16px;font-weight:600;font-size:18px}
+.pasos{list-style:none;display:grid;gap:14px}
+.pasos li{display:flex;gap:16px;align-items:flex-start;background:var(--cafe-2);border-radius:18px;padding:18px 20px}
+.pasos b{flex:none;width:44px;height:44px;border-radius:50%;background:var(--amarillo);color:var(--cafe);display:grid;place-items:center;font-family:var(--titulo);font-size:22px;font-weight:400}
+.pasos strong{display:block;font-family:var(--titulo);font-weight:400;font-size:22px;color:#fff;line-height:1.1}
+.pasos span{color:#e9d6bd;font-weight:600;font-size:15.5px}
+
+/* ---------- instagram ---------- */
+.ig-grilla{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:30px}
+.ig-grilla a{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:var(--crema-3);display:block}
+.ig-grilla img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.ig-grilla a:hover img{transform:scale(1.05)}
+.ig-grilla a::after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 0 1px #0000001a;border-radius:16px}
+.ig-pie{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:24px}
+.ig-pie p{font-weight:700;color:var(--gris)}
+.ig-pie p b{color:var(--cafe);font-family:var(--titulo);font-weight:400;font-size:24px}
+
+/* ---------- dónde ---------- */
+.donde{background:var(--papel);border-top:1px solid var(--linea)}
+.donde .contenedor{display:grid;grid-template-columns:.8fr 1.2fr;gap:32px;align-items:stretch}
+.dato-lugar{display:grid;gap:18px;align-content:start}
+.dato-lugar div{border-left:4px solid var(--naranja);padding-left:14px;font-weight:600}
+.dato-lugar b{display:block;font-weight:900;text-transform:uppercase;letter-spacing:.1em;font-size:12.5px;color:var(--rojo)}
+.dato-lugar a{font-weight:800}
+.mapa{border-radius:22px;overflow:hidden;border:1px solid var(--linea);min-height:360px;background:var(--crema-2)}
+.mapa iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+
+/* ---------- cierre ---------- */
+.cierre{text-align:center;color:#fff;padding:90px 0;background:
+  radial-gradient(600px 320px at 50% 0%, #e3243a, transparent 70%),
+  repeating-linear-gradient(90deg,#ffffff0a 0 26px,transparent 26px 52px),
+  repeating-linear-gradient(0deg,#ffffff0a 0 26px,transparent 26px 52px),
+  var(--rojo)}
+.cierre .script{font-size:clamp(40px,6vw,60px);color:var(--amarillo);display:block;margin-bottom:4px}
+.cierre h2{max-width:760px;margin:0 auto 14px}
+.cierre p{color:#ffe0d8;margin-bottom:28px;font-weight:700}
+.cierre .botones{justify-content:center}
+.cierre .btn-borde{color:#fff}
+footer{background:var(--cafe);color:#d9c3a6;padding:28px 0 30px;font-size:14px;font-weight:600}
+footer .contenedor{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+footer .pie-marca{display:flex;align-items:center;gap:12px}
+footer img{width:40px;height:40px;border-radius:10px}
+footer a{color:#fff}
+
+/* barra fija en el celular */
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;grid-template-columns:1fr 1.6fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#fff6e8f2;backdrop-filter:blur(10px);border-top:1px solid var(--linea)}
+.barra .btn{padding:14px 10px;font-size:16px}
+.barra .btn-borde{color:var(--cafe)}
+
+@media (max-width:980px){
+  .carta{grid-template-columns:1fr 1fr}
+  .cat.pizzas{grid-column:1/-1;grid-row:auto}
+  .cat.sandw{grid-column:1/-1}
+  .ig-grilla{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:900px){
+  .portada .contenedor,.pedido .contenedor,.directo .contenedor,.donde .contenedor{grid-template-columns:1fr}
+  .portada{padding:34px 0 50px;text-align:center}
+  .portada .bajada{margin-inline:auto}
+  .portada .botones,.sin-apps{justify-content:center}
+  .portada h1 .script{transform-origin:center}
+  .portada .eyebrow{justify-content:center}
+  .portada .eyebrow::before{display:none}
+  .fotos-portada{height:350px;width:min(340px,100%);order:-1}
+  .polaroid.a{width:190px;height:325px;right:18px;top:6px}
+  .polaroid.b{width:150px;height:200px;left:10px}
+  .sticker{width:96px;height:96px;left:4px;top:8px}
+  .sticker b{font-size:31px}
+  .sticker span{font-size:11px}
+  .sticker i{font-size:12px}
+  .datos ul{grid-template-columns:1fr 1fr}
+  .datos li:nth-child(2){border-right:0}
+  .datos li:nth-child(-n+2){border-bottom:1px solid #ffffff1a}
+  .ticket{position:static}
+  section{padding:60px 0}
+  .nav a.link{display:none}
+  .barra{display:grid}
+  footer{padding-bottom:100px}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .datos li{padding:15px 10px;gap:10px}
+  .datos .ic{display:none}
+  .datos strong{font-size:19px}
+  .datos span{font-size:13px}
+  .carta{grid-template-columns:1fr 1fr;gap:12px}
+  .cat.tapa{padding:20px 14px}
+  .cat.tapa .script{font-size:34px}
+  .fila2{grid-template-columns:1fr}
+  .nav .largo{display:none}
+  .cat.tapa p{font-size:13.5px}
+  .cat.sandw{flex-direction:column}
+  .cat.pizzas .foto{min-height:260px}
+  .ig-grilla{grid-template-columns:repeat(2,1fr);gap:10px}
+  .productos{padding:4px 16px 10px}
+  .ticket{padding:22px 16px 18px}
+  .nav .btn{padding:10px 16px}
+  .marca small{font-size:11.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="contenedor">
+    <a class="marca" href="#">
+      <img src="img/logo.png" alt="Logo de Don Flores, pizza de verdad">
+      <span><b>Don Flores</b><small>Pizza, pasta y más · Ituzaingó</small></span>
+    </a>
+    <nav class="nav">
+      <a class="link" href="#carta">La carta</a>
+      <a class="link" href="#donde">Dónde estamos</a>
+      <a class="btn btn-rojo" style="gap:.3em" href="#pedido">Pedí<span class="largo">ahora</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="portada">
+    <div class="contenedor">
+      <div>
+        <div class="eyebrow">Pizzería · Brandsen 805 · Ituzaingó</div>
+        <h1><span class="script">Pizza de verdad</span>Pedí directo, <em>sin apps.</em></h1>
+        <p class="bajada">Pizza, pasta y más, con <b>envíos a domicilio</b>. Elegí lo que querés acá
+          y te llega a WhatsApp con el pedido ya escrito. Lo mandás y listo.</p>
+        <div class="botones">
+          <a class="btn btn-amarillo" href="#pedido">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+            Armá tu pedido</a>
+          <a class="btn btn-borde" href="#carta">Ver la carta</a>
+        </div>
+        <ul class="sin-apps">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Sin descargar nada</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Sin registrarte</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5L20 7"/></svg>Hablás con el local</li>
+        </ul>
+      </div>
+      <div class="fotos-portada" aria-hidden="false">
+        <div class="sticker"><b>4,7</b><i>★★★★★</i><span>en Google</span></div>
+        <div class="polaroid a"><img src="img/pizza-cortando.jpg" alt="Pizza rectangular de jamón y morrones mitad muzza, recién cortada" fetchpriority="high"></div>
+        <div class="polaroid b"><img src="img/muzza-queso.jpg" alt="Porción de muzza con aceitunas estirando el queso"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="datos">
+    <ul class="contenedor">
+      <li><div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div>
+        <div><strong>4,7</strong><span>estrellas en Google</span></div></li>
+      <li><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M9 17h6l-3-7H8M15 6h3l3 11M12 10h5"/></svg></div>
+        <div><strong>Envíos</strong><span>a domicilio</span></div></li>
+      <li><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2C20 17.5 12 22 12 22z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><strong>Brandsen 805</strong><span>Ituzaingó</span></div></li>
+      <li><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
+        <div><strong>12 mil</strong><span>nos siguen en Instagram</span></div></li>
+    </ul>
+  </div>
+
+  <section id="carta">
+    <div class="contenedor">
+      <div class="carta-head">
+        <div><div class="eyebrow">La carta</div><h2>Pizza, pasta y más</h2></div>
+        <p>Pizzas redondas y rectangulares, mitad y mitad, pastas, empanadas y sándwiches.
+          Elegí y sumalo a tu pedido.</p>
+      </div>
+      <div class="carta">
+        <article class="cat pizzas">
+          <div class="foto"><img src="img/jamon.jpg" alt="Pizza redonda de jamón con aceitunas en su caja" loading="lazy"></div>
+          <div class="cuerpo">
+            <h3>Pizzas</h3>
+            <p>Redondas o rectangulares, con aceitunas y orégano. Y si no te decidís, mitad y mitad.</p>
+            <div class="gustos">
+              <span class="gusto">Muzza</span><span class="gusto">Jamón</span><span class="gusto">Jamón y morrones</span>
+              <span class="gusto">Tomate y jamón</span><span class="gusto">Fugazzeta</span><span class="gusto">Mitad y mitad</span>
+            </div>
+          </div>
+        </article>
+        <article class="cat tapa cafe">
+          <span class="script">Pastas</span>
+          <p>Contanos cuál querés cuando hagas el pedido.</p>
+        </article>
+        <article class="cat tapa naranja">
+          <span class="script">Empanadas</span>
+          <p>Sumalas a la pizza y contanos de qué las querés.</p>
+        </article>
+        <article class="cat sandw">
+          <div class="foto"><img src="img/sandwich-papas.jpg" alt="Sándwich en pan de pizza con papas fritas, en caja" loading="lazy"></div>
+          <div class="cuerpo">
+            <h3>Sándwiches</h3>
+            <p>En pan de pizza, en caja y con papas fritas al lado.</p>
+          </div>
+        </article>
+      </div>
+      <p class="aviso-demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16.5v.5"/></svg>
+        Versión de muestra: los gustos salen de las fotos de @donfloresituzaingo. Los precios se cargan con la carta del local.</p>
+    </div>
+  </section>
+
+  <div class="mantel" aria-hidden="true"></div>
+
+  <section class="pedido" id="pedido">
+    <div class="contenedor">
+      <div class="pedido-intro">
+        <div><div class="eyebrow">Armá tu pedido</div><h2>Elegí, completá y mandalo</h2></div>
+        <p>Sumá lo que quieras con el +. Abajo elegís si te lo mandan o lo pasás a buscar.
+          El mensaje se escribe solo.</p>
+      </div>
+
+      <div class="productos" id="productos"><!-- lo arma el script --></div>
+
+      <form class="ticket" id="ticket" novalidate>
+        <h3>Tu pedido <span id="contador">0 productos</span></h3>
+        <ul class="resumen" id="resumen"><li class="vacio">Todavía no sumaste nada.</li></ul>
+
+        <div class="etiqueta">¿Cómo lo querés?</div>
+        <div class="opciones">
+          <label class="opcion"><input type="radio" name="entrega" value="envio" checked><span>Envío<small>a domicilio</small></span></label>
+          <label class="opcion"><input type="radio" name="entrega" value="retiro"><span>Lo retiro<small>en Brandsen 805</small></span></label>
+        </div>
+
+        <div id="bloqueEnvio" style="display:grid;gap:12px">
+          <label class="campo" id="campoDir">Dirección<input id="fDir" placeholder="Calle y número" autocomplete="street-address"></label>
+          <label class="campo">Entre calles / depto (opcional)<input id="fEntre" placeholder="Ej: entre Mitre y Soler, PB B" autocomplete="off"></label>
+        </div>
+
+        <div class="fila2">
+          <label class="campo">Tu nombre<input id="fNombre" placeholder="Ej: Laura" autocomplete="given-name"></label>
+          <label class="campo">¿Para cuándo?
+            <select id="fCuando">
+              <option>Lo antes posible</option>
+              <option>Para más tarde (lo aclaro abajo)</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="campo">¿Cómo querés pagar?
+          <select id="fPago">
+            <option>Efectivo</option>
+            <option>Transferencia</option>
+            <option>Lo consulto por WhatsApp</option>
+          </select>
+        </label>
+
+        <label class="campo">Aclaraciones (opcional)<textarea id="fNota" placeholder="Ej: de qué son las empanadas, qué pasta, sin aceitunas, a qué hora…"></textarea></label>
+
+        <div class="msg-error oculto" id="error"></div>
+
+        <button class="btn btn-wa" type="submit" id="enviar">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1.1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.3 13.3 0 0 0 5.1 4.5c.7.3 1.3.5 1.7.6a4.2 4.2 0 0 0 1.9.1 3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 1 1 8.3 4.6zm8.4-18.2A11.8 11.8 0 0 0 1.6 17.9L0 24l6.3-1.6a11.8 11.8 0 0 0 5.6 1.4 11.8 11.8 0 0 0 8.4-20.2z"/></svg>
+          Mandar pedido por WhatsApp</button>
+        <p class="nota">Se abre WhatsApp con tu pedido escrito. El local te confirma el total y la demora.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="directo">
+    <div class="contenedor">
+      <div>
+        <div class="eyebrow">Por qué pedir acá</div>
+        <h2>Del horno de Brandsen <em>a tu mesa</em>, sin nadie en el medio</h2>
+        <p class="lead">Tu pedido le llega directo al WhatsApp del local. Sin apps, sin cuentas, sin
+          contraseñas. Si tenés una duda, te contesta la misma pizzería que te cocina.</p>
+        <a class="btn btn-amarillo" style="margin-top:26px" href="#pedido">Armá tu pedido</a>
+      </div>
+      <ol class="pasos">
+        <li><b>1</b><div><strong>Elegís</strong><span>Pizzas, mitad y mitad, pastas, empanadas o sándwiches.</span></div></li>
+        <li><b>2</b><div><strong>Mandás</strong><span>Se abre WhatsApp con el pedido, la dirección y cómo pagás.</span></div></li>
+        <li><b>3</b><div><strong>Te confirman</strong><span>El local te responde con el total y cuándo sale.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="instagram">
+    <div class="contenedor">
+      <div class="eyebrow">Recién salidas del horno</div>
+      <h2>Así sale cada pizza</h2>
+      <div class="ig-grilla">
+        <a href="https://www.instagram.com/donfloresituzaingo/" target="_blank" rel="noopener"><img src="img/tomate-y-jamon.jpg" alt="Pizza rectangular mitad tomate y jamón, mitad muzza, en su caja" loading="lazy"></a>
+        <a href="https://www.instagram.com/donfloresituzaingo/" target="_blank" rel="noopener"><img src="img/rectangular-y-redonda.jpg" alt="Pizza rectangular de fugazzeta y jamón al lado de una redonda de jamón y morrones" loading="lazy"></a>
+        <a href="https://www.instagram.com/donfloresituzaingo/" target="_blank" rel="noopener"><img src="img/muzza-queso.jpg" alt="Muzza con aceitunas estirando el queso" loading="lazy"></a>
+        <a href="https://www.instagram.com/donfloresituzaingo/" target="_blank" rel="noopener"><img src="img/jamon.jpg" alt="Pizza de jamón con aceitunas" loading="lazy"></a>
+        <a href="https://www.instagram.com/donfloresituzaingo/" target="_blank" rel="noopener"><img src="img/pizza-cortando.jpg" alt="Cortando una pizza rectangular" loading="lazy"></a>
+        <a href="https://www.instagram.com/donfloresituzaingo/" target="_blank" rel="noopener"><img src="img/caja.jpg" alt="Caja de pizza con un dibujo pegado en la tapa" loading="lazy"></a>
+      </div>
+      <div class="ig-pie">
+        <p><b>12 mil</b> personas siguen a Don Flores en Instagram.</p>
+        <a class="btn btn-rojo" href="https://www.instagram.com/donfloresituzaingo/" target="_blank" rel="noopener">Seguí a @donfloresituzaingo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="donde" id="donde">
+    <div class="contenedor">
+      <div class="dato-lugar">
+        <div class="eyebrow" style="border:0;padding:0">Dónde estamos</div>
+        <h2 style="border:0;padding:0">En Brandsen 805, Ituzaingó</h2>
+        <div><b>Dirección</b>Cnel. Brandsen 805, Ituzaingó</div>
+        <div><b>WhatsApp</b><a href="https://wa.me/5491160883166?text=Hola%21%20Te%20escribo%20desde%20la%20web." target="_blank" rel="noopener">11 6088-3166</a></div>
+        <div><b>Envíos</b>A domicilio. Preguntá si llegan a tu casa cuando hagas el pedido.</div>
+        <div><b>Horarios</b>Consultalos por WhatsApp.</div>
+        <a class="btn btn-borde" style="color:var(--cafe);justify-self:start" href="https://www.google.com/maps/search/?api=1&query=Don+Flores+Cnel.+Brandsen+805+Ituzaing%C3%B3" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa de Don Flores en Brandsen 805, Ituzaingó" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Coronel+Brandsen+805,+Ituzaing%C3%B3,+Buenos+Aires&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="cierre">
+    <div class="contenedor">
+      <span class="script">¿Pizza esta noche?</span>
+      <h2>Armalo en un minuto y mandalo directo</h2>
+      <p>Sin apps. El pedido le llega al local por WhatsApp.</p>
+      <div class="botones">
+        <a class="btn btn-amarillo" href="#pedido">Armá tu pedido</a>
+        <a class="btn btn-borde" href="#carta">Ver la carta</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="contenedor">
+    <span class="pie-marca"><img src="img/logo.png" alt=""><span>Don Flores · Pizza de verdad · Cnel. Brandsen 805, Ituzaingó</span></span>
+    <span><a href="https://www.instagram.com/donfloresituzaingo/" target="_blank" rel="noopener">@donfloresituzaingo</a></span>
+  </div>
+</footer>
+
+<div class="barra">
+  <a class="btn btn-borde" href="#carta">Ver carta</a>
+  <a class="btn btn-wa" href="#pedido" id="barraPedido">Armá tu pedido</a>
+</div>
+
+<script>
+// Armador de pedido: sumás productos, elegís envío o retiro y se arma el mensaje para WhatsApp.
+// Carta de muestra: sólo lo que se ve en las fotos de @donfloresituzaingo, sin precios.
+var WA = '5491160883166';
+var GUSTOS = ['Muzza', 'Jamón', 'Jamón y morrones', 'Tomate y jamón', 'Fugazzeta'];
+var CARTA = [
+  { grupo: 'Pizzas', nota: 'redondas o rectangulares', items: [
+    { id: 'muzza', nom: 'Muzza', det: 'Con aceitunas' },
+    { id: 'jamon', nom: 'Jamón', det: 'Con aceitunas' },
+    { id: 'jamon-morrones', nom: 'Jamón y morrones' },
+    { id: 'tomate-jamon', nom: 'Tomate y jamón' },
+    { id: 'fugazzeta', nom: 'Fugazzeta', det: 'Cebolla y queso' },
+    { id: 'mitad', nom: 'Mitad y mitad', det: 'Elegí los dos gustos', mitades: true }
+  ]},
+  { grupo: 'Pastas', items: [ { id: 'pastas', nom: 'Pastas', det: 'Contanos cuál en aclaraciones' } ] },
+  { grupo: 'Empanadas', items: [ { id: 'empanadas', nom: 'Empanadas', det: 'Contanos de qué en aclaraciones' } ] },
+  { grupo: 'Sándwiches', items: [ { id: 'sandwich', nom: 'Sándwich con papas fritas' } ] }
+];
+var cant = {};
+var $ = function (id) { return document.getElementById(id); };
+
+// Dibuja la lista de productos
+(function () {
+  var html = '';
+  CARTA.forEach(function (g) {
+    html += '<div class="grupo"><h3>' + g.grupo + (g.nota ? ' <small>' + g.nota + '</small>' : '') + '</h3>';
+    g.items.forEach(function (it) {
+      cant[it.id] = 0;
+      html += '<div class="item" id="it-' + it.id + '"><div class="nom">' + it.nom + (it.det ? '<small>' + it.det + '</small>' : '') + '</div>' +
+        '<div class="cant"><button type="button" aria-label="Sacar ' + it.nom + '" data-id="' + it.id + '" data-d="-1">&minus;</button>' +
+        '<output id="c-' + it.id + '">0</output>' +
+        '<button type="button" class="mas" aria-label="Sumar ' + it.nom + '" data-id="' + it.id + '" data-d="1">+</button></div>';
+      if (it.mitades) {
+        var opts = GUSTOS.map(function (x) { return '<option>' + x + '</option>'; }).join('');
+        html += '<div class="mitades"><label>Una mitad<select id="m1">' + opts + '</select></label>' +
+          '<label>La otra mitad<select id="m2">' + opts.replace('<option>Jamón</option>', '<option selected>Jamón</option>') + '</select></label></div>';
+      }
+      html += '</div>';
+    });
+    html += '</div>';
+  });
+  $('productos').innerHTML = html;
+})();
+
+function todos() { var l = []; CARTA.forEach(function (g) { g.items.forEach(function (it) { l.push(it); }); }); return l; }
+function nombreLinea(it) {
+  if (it.mitades) return 'Pizza mitad ' + $('m1').value.toLowerCase() + ' / mitad ' + $('m2').value.toLowerCase();
+  if (it.id === 'pastas' || it.id === 'empanadas' || it.id === 'sandwich') return it.nom;
+  return 'Pizza de ' + it.nom.toLowerCase();
+}
+function lineas() {
+  return todos().filter(function (it) { return cant[it.id] > 0; }).map(function (it) {
+    return { n: cant[it.id], txt: nombreLinea(it) };
+  });
+}
+function total() { var t = 0; for (var k in cant) t += cant[k]; return t; }
+
+function pintar() {
+  todos().forEach(function (it) {
+    $('c-' + it.id).textContent = cant[it.id];
+    $('it-' + it.id).classList.toggle('activo', cant[it.id] > 0);
+  });
+  var l = lineas(), t = total();
+  $('resumen').innerHTML = l.length ? l.map(function (x) { return '<li><b>' + x.n + '×</b><span>' + x.txt + '</span></li>'; }).join('')
+    : '<li class="vacio">Todavía no sumaste nada.</li>';
+  $('contador').textContent = t + (t === 1 ? ' producto' : ' productos');
+  var b = $('barraPedido');
+  b.textContent = t ? 'Mandar pedido (' + t + ')' : 'Armá tu pedido';
+  if (t) $('error').classList.add('oculto');
+}
+
+$('productos').addEventListener('click', function (e) {
+  var btn = e.target.closest('button[data-id]'); if (!btn) return;
+  var id = btn.getAttribute('data-id');
+  cant[id] = Math.max(0, Math.min(99, cant[id] + Number(btn.getAttribute('data-d'))));
+  pintar();
+});
+$('productos').addEventListener('change', pintar);
+
+function entrega() { return document.querySelector('input[name=entrega]:checked').value; }
+document.querySelectorAll('input[name=entrega]').forEach(function (r) {
+  r.addEventListener('change', function () { $('bloqueEnvio').style.display = entrega() === 'envio' ? 'grid' : 'none'; });
+});
+$('fDir').addEventListener('input', function () { $('campoDir').classList.remove('error'); });
+
+function error(msg, foco) {
+  var e = $('error'); e.textContent = msg; e.classList.remove('oculto');
+  if (foco) { foco.focus({ preventScroll: true }); foco.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+}
+
+function enviar() {
+  var v = function (id) { return ($(id).value || '').trim(); };
+  var l = lineas();
+  if (!l.length) { error('Sumá al menos un producto con el +.', null); $('productos').scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+  if (entrega() === 'envio' && !v('fDir')) { $('campoDir').classList.add('error'); error('Poné la dirección para el envío.', $('fDir')); return; }
+  var m = ['¡Hola Don Flores! Quiero hacer un pedido desde la web:', ''];
+  l.forEach(function (x) { m.push('• ' + x.n + ' × ' + x.txt); });
+  m.push('');
+  if (entrega() === 'envio') m.push('Envío a: ' + v('fDir') + (v('fEntre') ? ' (' + v('fEntre') + ')' : ''));
+  else m.push('Retiro en el local (Brandsen 805)');
+  if (v('fNombre')) m.push('Nombre: ' + v('fNombre'));
+  m.push('Para: ' + v('fCuando'));
+  m.push('Pago: ' + v('fPago'));
+  if (v('fNota')) m.push('Aclaraciones: ' + v('fNota'));
+  m.push('', '¿Me confirmás el total y la demora? ¡Gracias!');
+  window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(m.join('\n')), '_blank');
+}
+$('ticket').addEventListener('submit', function (e) { e.preventDefault(); enviar(); });
+$('barraPedido').addEventListener('click', function (e) {
+  if (total()) { e.preventDefault(); enviar(); }
+});
+pintar();
+</script>
+</body>
+</html>
